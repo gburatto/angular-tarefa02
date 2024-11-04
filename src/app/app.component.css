@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+}
+
+nav {
+  flex: 0 1 10em;
+}
+
+main {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 30em) {
+  /* Para telas pequenas: */
+  :host {
+    flex-direction: column;
+  }
+  nav {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+}
