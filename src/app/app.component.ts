@@ -11,5 +11,4 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  public title = 'angular17-app';
 }
