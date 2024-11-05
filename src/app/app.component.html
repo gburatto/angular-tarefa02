@@ -2,6 +2,13 @@
   <app-lista-categorias></app-lista-categorias>
 </nav>
 <main>
-  Selecione uma categoria
-  <app-categoria></app-categoria>
+  @if (categoriaService.categoriaSelecionada$ | async; as c) {
+    <app-categoria
+      [categoria]="c"
+    >
+    </app-categoria>
+  }
+  @else {
+    Selecione uma categoria
+  }
 </main>

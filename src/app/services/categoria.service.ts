@@ -53,11 +53,18 @@ export class CategoriaService {
   private _categorias$ = new ReplaySubject<Categoria[]>(1);
   public categorias$ = this._categorias$.asObservable();
 
+  private _categoriaSelecionada$ = new ReplaySubject<Categoria>(1);
+  public categoriaSelecionada$ = this._categoriaSelecionada$.asObservable();
+
   constructor() {
     this._categorias$.next(
       CATEGORIAS.map(c => new Categoria(
         c.nome,
       )),
     );
+  }
+
+  public selecionaCategoria(c: Categoria): void {
+    this._categoriaSelecionada$.next(c);
   }
 }
