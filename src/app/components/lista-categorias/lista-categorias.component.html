@@ -1,1 +1,5 @@
-<p>lista-categorias works!</p>
+<button
+  *ngFor="let c of (categoriaService.categorias$ | async)"
+>
+  {{ c.nome }}
+</button>

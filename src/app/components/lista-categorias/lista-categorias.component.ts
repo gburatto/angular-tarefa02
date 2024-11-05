@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { CategoriaService } from '../../services/categoria.service';
 
 @Component({
   selector: 'app-lista-categorias',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+  ],
   templateUrl: './lista-categorias.component.html',
   styleUrl: './lista-categorias.component.css'
 })
 export class ListaCategoriasComponent {
-
+  public categoriaService = inject(CategoriaService);
 }
