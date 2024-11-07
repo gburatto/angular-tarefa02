@@ -1,7 +1,7 @@
 .filme {
   display: flex;
   align-items: stretch;
-  margin: 1em 1em 0;
+  margin: .2em 1em 1em 1.5em;
   border-radius: .5em;
   box-shadow: 3px 3px 5px 3px rgb(230, 230, 230);
   overflow: hidden;
@@ -39,4 +39,36 @@
 
 .categorias {
   color: rgb(111, 47, 171);
+}
+
+.semFilmes {
+  font-style: italic;
+  color: rgb(91, 91, 91);
+}
+
+@media screen and (max-width: 30em) {
+  /* Para telas pequenas: */
+
+  .imagem {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    max-width: 40%;
+  }
+
+  .imagem img {
+    max-height: 7em;
+    width: 100%;
+    margin: .3em;
+  }
+
+  .filme {
+    margin: 1em 1em 1em 1.5em;
+    max-height: fit-content;
+  }
+
+  .filme h3 {
+    margin: .5em 0 .25em;
+  }
+
 }

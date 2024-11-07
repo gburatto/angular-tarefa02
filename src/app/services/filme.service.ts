@@ -55,6 +55,9 @@ const FILMES = [
       {
         "nome": "Fantasia",
       },
+      {
+        "nome": "Família",
+      },
     ],
     "atores": [
       "Tom Hanks",
@@ -112,6 +115,9 @@ const FILMES = [
     "diretor": "J.J. Abrams",
     "ano": 2019,
     "categorias": [
+      {
+        "nome": "Ficção Científica",
+      },
       {
         "nome": "Aventura",
       },

@@ -1,3 +1,17 @@
 button {
   width: 100%;
+  background-color: rgb(45, 206, 177);
+  border: none;
+  border-radius: .5em;
+  margin: .2em;
+  padding: .2em;
+}
+
+button:hover {
+  background-color: rgb(115, 241, 218);
+}
+
+button:focus {
+  background-color: rgb(13, 65, 55);
+  color: white;
 }

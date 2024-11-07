@@ -43,6 +43,22 @@ const CATEGORIAS = [
     "_id": 10,
     "nome": "Romance",
   },
+  {
+    "_id": 11,
+    "nome": "Musical",
+  },
+  {
+    "_id": 12,
+    "nome": "Família",
+  },
+  {
+    "_id": 13,
+    "nome": "História",
+  },
+  {
+    "_id": 14,
+    "nome": "Ficção Científica",
+  },
 ];
 
 @Injectable({
