@@ -1,0 +1,42 @@
+.filme {
+  display: flex;
+  align-items: stretch;
+  margin: 1em 1em 0;
+  border-radius: .5em;
+  box-shadow: 3px 3px 5px 3px rgb(230, 230, 230);
+  overflow: hidden;
+  max-height: 12em;
+}
+
+.imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem img {
+  max-height: 12em;
+  width: auto;
+  object-fit: contain;
+}
+
+.dadosFilme {
+  flex: 1;
+  padding: 0 .5em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filme h3 {
+  margin: .75em 0 1em;
+}
+
+.dadosFilme p {
+  font-size: x-small;
+}
+
+.categorias {
+  color: rgb(111, 47, 171);
+}

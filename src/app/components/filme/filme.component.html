@@ -1,0 +1,20 @@
+<div *ngIf="filmes.length > 0; else empty">
+  <div *ngFor="let filme of filmes" class="filme">
+    <div class="imagem">
+      <img [src]="filme.imagem" />
+    </div>
+    <div class="dadosFilme">
+      <h3>{{ filme.titulo }}</h3>
+      <p>{{ filme.ano }}, {{ filme.diretor }}</p>
+      <p class="categorias">
+        <span *ngFor="let categoria of filme.categorias; let i = index">
+          {{ categoria.nome }}<span *ngIf="i < filme.categorias.length - 1">, <br></span>
+        </span>
+      </p>
+      <p>{{ filme.atores.join(', ') }}</p>
+    </div>
+  </div>
+</div>
+<ng-template #empty>
+  <p>Não há filmes para esta categoria.</p>
+</ng-template>
