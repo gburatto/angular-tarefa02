@@ -59,6 +59,10 @@ const CATEGORIAS = [
     "_id": 14,
     "nome": "Ficção Científica",
   },
+  {
+    "_id": 15,
+    "nome": "Suspense",
+  },
 ];
 
 @Injectable({

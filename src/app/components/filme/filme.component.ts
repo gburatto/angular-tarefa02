@@ -30,7 +30,4 @@ export class FilmeComponent implements OnChanges {
     }
   }
 
-  public getNomesCategorias(filme: Filme): string {
-    return filme.categorias.map(c => c.nome).join(',\n');
-  }
 }

@@ -2,18 +2,22 @@ import { Injectable } from '@angular/core';
 import { Filme } from '../models/filme';
 import { map, Observable, ReplaySubject } from 'rxjs';
 import { Categoria } from '../models/categoria';
+import { IFilme } from '../interfaces/filme';
 
 const IMAGE_NOT_FOUND = "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=";
-const FILMES = [
+const FILMES: IFilme[] = [
   {
+    "_id": 1,
     "titulo": "Beetlejuice",
     "diretor": "Tim Burton",
     "ano": 1988,
     "categorias": [
       {
+        "_id": 1,
         "nome": "Comédia",
       },
       {
+        "_id": 2,
         "nome": "Fantasia",
       },
     ],
@@ -26,14 +30,17 @@ const FILMES = [
     "imagem": IMAGE_NOT_FOUND,
   },
   {
+    "_id": 2,
     "titulo": "Indiana Jones e A Relíquia do Destino",
     "diretor": "James Mangold",
     "ano": 2023,
     "categorias": [
       {
+        "_id": 5,
         "nome": "Aventura",
       },
       {
+        "_id": 9,
         "nome": "Ação",
       },
     ],
@@ -45,17 +52,21 @@ const FILMES = [
     "imagem": "https://br.web.img2.acsta.net/pictures/23/04/10/17/56/1153346.jpg",
   },
   {
+    "_id": 3,
     "titulo": "Toy Story 2",
     "diretor": "John Lasseter",
     "ano": 1999,
     "categorias": [
       {
+        "_id": 7,
         "nome": "Animação",
       },
       {
+        "_id": 2,
         "nome": "Fantasia",
       },
       {
+        "_id": 12,
         "nome": "Família",
       },
     ],
@@ -67,14 +78,17 @@ const FILMES = [
     "imagem": "https://upload.wikimedia.org/wikipedia/pt/4/40/Movie_poster_toy_story_2.jpg",
   },
   {
+    "_id": 4,
     "titulo": "Marley & Eu",
     "diretor": "David Frankel",
     "ano": 2008,
     "categorias": [
       {
+        "_id": 4,
         "nome": "Drama",
       },
       {
+        "_id": 1,
         "nome": "Comédia",
       },
     ],
@@ -86,20 +100,25 @@ const FILMES = [
     "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/09/Marley_Me_2008.jpg",
   },
   {
+    "_id": 5,
     "titulo": "Tropa de Elite",
     "diretor": "José Padilha",
     "ano": 2007,
     "categorias": [
       {
+        "_id": 9,
         "nome": "Ação",
       },
       {
+        "_id": 4,
         "nome": "Drama",
       },
       {
+        "_id": 15,
         "nome": "Suspense",
       },
       {
+        "_id": 3,
         "nome": "Crime",
       },
     ],
@@ -111,14 +130,17 @@ const FILMES = [
     "imagem": "https://upload.wikimedia.org/wikipedia/pt/2/2a/TropaDeElitePoster.jpg",
   },
   {
+    "_id": 6,
     "titulo": "Star Wars: A Ascensão Skywalker",
     "diretor": "J.J. Abrams",
     "ano": 2019,
     "categorias": [
       {
+        "_id": 14,
         "nome": "Ficção Científica",
       },
       {
+        "_id": 5,
         "nome": "Aventura",
       },
     ],
@@ -130,14 +152,17 @@ const FILMES = [
     "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/08/Star_Wars_The_Rise_of_Skywalker.jpg",
   },
   {
+    "_id": 7,
     "titulo": "Como Se Fosse a Primeira Vez",
     "diretor": "Peter Segal",
     "ano": 2004,
     "categorias": [
       {
+        "_id": 1,
         "nome": "Comédia",
       },
       {
+        "_id": 10,
         "nome": "Romance",
       },
     ],
@@ -189,5 +214,9 @@ export class FilmeService {
         return filmesFiltrados;
       })
     );
+  }
+
+  public getNomesCategorias(filme: Filme): string {
+    return filme.categorias.map(c => c.nome).join(',\n');
   }
 }
